@@ -1,12 +1,12 @@
 //your JS code here. If required.
-function callme(){
-	return new promise((resolve,reject)=>{
+function generatePromise(){
+	return new Promise((resolve,reject)=>{
 		setTimeout(()=>{
-			resolve("Hello, world!");
-		})
+			resolve("Hello, world!")
+		}, 1000)
 	})
 }
-callme().then((data)=>{
+generatePromise().then((data)=>{
 	const element=document.getElementById("output");
 	element.innerText=data;
 })
