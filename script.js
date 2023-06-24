@@ -1,5 +1,12 @@
 //your JS code here. If required.
 function callme(){
-	console.log("hello, world!");
+	return new promise((resolve,reject)=>{
+		setTimeout(()=>{
+			resolve("Hello, world!");
+		})
+	})
 }
-setTimeout(callme,1000);
+callme().then((data)=>{
+	const element=document.getElementById("output");
+	element.innerText=data;
+})
